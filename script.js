@@ -48,6 +48,20 @@ ctaButtons.forEach(button => {
     });
 });
 
+// Expandable service details toggle
+const serviceToggles = document.querySelectorAll('.service-toggle');
+serviceToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const detailsId = toggle.getAttribute('aria-controls');
+        const details = document.getElementById(detailsId);
+        if (!details) return;
+
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+        details.hidden = isExpanded;
+    });
+});
+
 // Update active navigation state based on scroll position
 function updateActiveNav() {
     const sections = document.querySelectorAll('section[id]');

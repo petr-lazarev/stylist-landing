@@ -20,12 +20,9 @@
         <div class="nav-container" id="navContainer">
             <a href="#hero" class="nav-link active">Главная</a>
             <a href="#about" class="nav-link">Обо мне</a>
-            <a href="#services" class="nav-link">Услуги</a>
-            <a href="#format" class="nav-link">Формат</a>
-            <a href="#process" class="nav-link">Процесс</a>
+            <a href="#services" class="nav-link">Услуги и цены</a>
             <a href="#works" class="nav-link">Работы</a>
             <a href="#reviews" class="nav-link">Отзывы</a>
-            <a href="#pricing" class="nav-link">Цены</a>
             <a href="#contact" class="nav-link">Контакты</a>
         </div>
     </nav>
@@ -35,7 +32,7 @@
         <div class="container">
             <h1 class="hero-name">Ольга Лазарева</h1>
             <p class="hero-subtitle">Персональный стилист</p>
-            <p class="hero-location">Онлайн — из любой точки мира. Лично — в GTA.</p>
+            <p class="hero-location">Онлайн — из любой точки мира. Лично — в Торонто, Берлингтон.</p>
             <p class="hero-tagline">Стиль как способ узнать себя и проявиться.</p>
             <button class="btn btn-primary cta-button">Записаться</button>
         </div>
@@ -57,79 +54,117 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services & Pricing Section -->
     <section id="services" class="section services">
         <div class="container">
-            <h2 class="section-title">Услуги</h2>
+            <h2 class="section-title">Услуги и цены</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <h3 class="service-title">Архетип и стиль</h3>
                     <p class="service-description">Исследуем ваши визуальные коды, характер, настроение и то, как это может выражаться через одежду.</p>
+                    <p class="service-price service-price--inline">от CAD $350</p>
+                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="archetype-details">
+                        <span>Карта стиля онлайн</span>
+                        <span class="service-toggle-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-details" id="archetype-details" hidden>
+                        <p class="service-details-meta"><strong>Формат:</strong> индивидуальная работа онлайн</p>
+                        <p class="service-details-meta"><strong>Стоимость:</strong> 350 CAD</p>
+                        <p class="service-details-subtitle">Структура альбома:</p>
+                        <p class="service-details-group">Архетипы:</p>
+                        <ul class="service-details-list">
+                            <li>ведущий</li>
+                            <li>дополнительный</li>
+                            <li>вспомогательный</li>
+                        </ul>
+                        <p class="service-details-group">Анализ внешности:</p>
+                        <ul class="service-details-list">
+                            <li>линии лица</li>
+                            <li>фактуры, которые усиливают внешность</li>
+                        </ul>
+                        <p class="service-details-group">Цветовая палитра:</p>
+                        <ul class="service-details-list">
+                            <li>базовые цвета</li>
+                            <li>акцентные</li>
+                            <li>гармоничные сочетания</li>
+                        </ul>
+                        <p class="service-details-group">Мудборд:</p>
+                        <ul class="service-details-list">
+                            <li>визуальное направление</li>
+                            <li>примеры костюмных ансамблей</li>
+                            <li>цветовые сочетания</li>
+                        </ul>
+                        <p class="service-details-group">Микс архетипов:</p>
+                        <ul class="service-details-list">
+                            <li>как сочетать архетипы между собой</li>
+                            <li>примеры комбинаций</li>
+                        </ul>
+                        <p class="service-details-group">Аксессуарная группа:</p>
+                        <ul class="service-details-list">
+                            <li>украшения</li>
+                            <li>сумки</li>
+                            <li>обувь (через призму линий и архетипов)</li>
+                        </ul>
+                        <p class="service-details-subtitle">Результат:</p>
+                        <p class="service-details-meta">клиент получает опорный альбом (PDF), с которым может самостоятельно ходить на шоппинг и принимать решения, опираясь на свой стиль.</p>
+                    </div>
                 </div>
                 <div class="service-card">
                     <h3 class="service-title">Разбор гардероба</h3>
                     <p class="service-description">Смотрим на вещи не с позиции ошибок, а с вопросом: что уже отражает вас, а что больше не поддерживает.</p>
+                    <p class="service-price service-price--inline">от CAD $160</p>
+                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="wardrobe-details">
+                        <span>Разбор гардероба онлайн или офлайн</span>
+                        <span class="service-toggle-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-details" id="wardrobe-details" hidden>
+                        <p class="service-details-meta"><strong>Формат:</strong> онлайн или офлайн</p>
+                        <p class="service-details-meta"><strong>Стоимость:</strong> от CAD $160 — 2 часа (2–4 часа в зависимости от объёма гардероба). Поддержка 3 месяца.</p>
+                        <p class="service-details-subtitle">Цель:</p>
+                        <ul class="service-details-list">
+                            <li>убрать лишние вещи</li>
+                            <li>оставить подходящие</li>
+                            <li>определить, чего не хватает</li>
+                            <li>сделать аудит гардероба</li>
+                        </ul>
+                        <p class="service-details-subtitle">Что входит:</p>
+                        <ul class="service-details-list">
+                            <li>разбор текущего гардероба</li>
+                            <li>рекомендации по сочетанию вещей и ссылки на нужные вещи</li>
+                            <li>выявление недостающих элементов</li>
+                            <li>список необходимых вещей</li>
+                            <li>объяснение, зачем нужна каждая позиция</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="service-card">
                     <h3 class="service-title">Шопинг-сопровождение</h3>
                     <p class="service-description">Подбираем вещи спокойно и осознанно — под ваш образ жизни, ощущения и задачи.</p>
+                    <p class="service-price service-price--inline">от CAD $70 / час</p>
+                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="shopping-details">
+                        <span>Шопинг-сопровождение</span>
+                        <span class="service-toggle-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-details" id="shopping-details" hidden>
+                        <p class="service-details-meta"><strong>Формат:</strong> офлайн</p>
+                        <p class="service-details-meta"><strong>Стоимость:</strong> 70 CAD, минимум 2 часа + 30 минут кофе и беседа.</p>
+                        <p class="service-details-subtitle">Что входит:</p>
+                        <ul class="service-details-list">
+                            <li>сопровождение во время шопинга</li>
+                            <li>объяснение выбора (почему подходит / не подходит)</li>
+                            <li>обучение сочетанию вещей</li>
+                        </ul>
+                        <p class="service-details-subtitle">Результат:</p>
+                        <p class="service-details-meta">клиент учится самостоятельно выбирать и покупать вещи.</p>
+                    </div>
                 </div>
                 <div class="service-card">
                     <h3 class="service-title">Капсула на сезон</h3>
                     <p class="service-description">Собираем понятную систему образов, в которой вещи сочетаются между собой и остаются живыми.</p>
-                </div>
-                <div class="service-card">
-                    <h3 class="service-title">Стилизация съемок</h3>
-                    <p class="service-description">Создаем визуальный образ для личных, творческих или брендовых съемок.</p>
+                    <p class="service-price">от CAD $360</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Work Format Section -->
-    <section id="format" class="section format">
-        <div class="container">
-            <h2 class="section-title">Формат работы</h2>
-            <p class="format-intro">Работа возможна удаленно из любой точки мира или лично в районе GTA — Greater Toronto Area.</p>
-            <div class="format-grid">
-                <div class="format-card">
-                    <h3 class="format-title">Онлайн</h3>
-                    <p class="format-description">Консультации, архетип, разбор гардероба, капсулы, подбор вещей и рекомендации.</p>
-                </div>
-                <div class="format-card">
-                    <h3 class="format-title">Лично в GTA</h3>
-                    <p class="format-description">Разбор гардероба, шопинг-сопровождение, стилизация съемок и индивидуальные встречи.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="section process">
-        <div class="container">
-            <h2 class="section-title">Как проходит работа</h2>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">01.</div>
-                    <h3 class="step-title">Запрос</h3>
-                    <p class="step-description">Вы рассказываете, с чем хотите прийти: стиль, гардероб, образ, переходный период или поиск себя.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">02.</div>
-                    <h3 class="step-title">Исследование</h3>
-                    <p class="step-description">Мы обсуждаем ваш ритм жизни, визуальные ориентиры, ощущения, архетипы и то, что хочется проявить.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">03.</div>
-                    <h3 class="step-title">Подбор</h3>
-                    <p class="step-description">Я собираю рекомендации, образы, сочетания или список вещей — в зависимости от формата работы.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">04.</div>
-                    <h3 class="step-title">Интеграция</h3>
-                    <p class="step-description">Вы получаете не набор правил, а понятную опору, которую можно постепенно внедрять в жизнь.</p>
-                </div>
-            </div>
+            <p class="pricing-note">Финальная стоимость зависит от формата, глубины запроса и объема работы.</p>
         </div>
     </section>
 
@@ -207,50 +242,27 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="section pricing">
-        <div class="container">
-            <h2 class="section-title">Цены</h2>
-            <div class="pricing-grid">
-                <div class="price-item">
-                    <h3 class="price-service">Онлайн-консультация</h3>
-                    <p class="price-amount">от CAD $108</p>
-                </div>
-                <div class="price-item">
-                    <h3 class="price-service">Архетип и стиль</h3>
-                    <p class="price-amount">от CAD $180</p>
-                </div>
-                <div class="price-item">
-                    <h3 class="price-service">Разбор гардероба</h3>
-                    <p class="price-amount">от CAD $216</p>
-                </div>
-                <div class="price-item">
-                    <h3 class="price-service">Шопинг-сопровождение</h3>
-                    <p class="price-amount">от CAD $264</p>
-                </div>
-                <div class="price-item">
-                    <h3 class="price-service">Капсула на сезон</h3>
-                    <p class="price-amount">от CAD $360</p>
-                </div>
-                <div class="price-item">
-                    <h3 class="price-service">Стилизация съемки</h3>
-                    <p class="price-amount">по запросу</p>
-                </div>
-            </div>
-            <p class="pricing-note">Финальная стоимость зависит от формата, глубины запроса и объема работы.</p>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="section contact">
         <div class="container">
             <h2 class="section-title">Контакты</h2>
             <p class="contact-intro">Если вы хотите лучше почувствовать свой стиль и выразить себя через одежду, напишите мне.</p>
-            <div class="contact-links">
-                <a href="https://t.me/username" class="contact-link" target="_blank" rel="noopener noreferrer">Telegram: @username</a>
-                <a href="https://wa.me/19059780427" class="contact-link" target="_blank" rel="noopener noreferrer">WhatsApp: +1-905-978-0427</a>
-                <a href="https://instagram.com/username" class="contact-link" target="_blank" rel="noopener noreferrer">Instagram: @username</a>
-                <a href="mailto:hello@example.com" class="contact-link">Email: hello@example.com</a>
+            <div class="contact-cards">
+                <a href="https://t.me/oly_laz" class="contact-card" target="_blank" rel="noopener noreferrer">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.94 4.5c.25-1.07-.62-1.86-1.6-1.47L2.6 10.07c-1.1.43-1.08 1.05-.2 1.32l4.45 1.39 10.3-6.5c.49-.3.93-.13.57.2l-8.34 7.53-.32 4.59c.45 0 .65-.2.88-.43l2.12-2.05 4.4 3.25c.81.45 1.39.22 1.59-.75l2.88-13.6z"/></svg>
+                    <span class="contact-card-name">Telegram</span>
+                    <span class="contact-card-handle">@oly_laz</span>
+                </a>
+                <a href="https://instagram.com/oly_laz" class="contact-card" target="_blank" rel="noopener noreferrer">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    <span class="contact-card-name">Instagram</span>
+                    <span class="contact-card-handle">@oly_laz</span>
+                </a>
+                <a href="mailto:olya.lazareva@gmail.com" class="contact-card">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
+                    <span class="contact-card-name">Email</span>
+                    <span class="contact-card-handle">olya.lazareva@gmail.com</span>
+                </a>
             </div>
         </div>
     </section>
