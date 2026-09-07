@@ -48,17 +48,16 @@ ctaButtons.forEach(button => {
     });
 });
 
-// Expandable service details toggle
-const serviceToggles = document.querySelectorAll('.service-toggle');
-serviceToggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-        const detailsId = toggle.getAttribute('aria-controls');
-        const details = document.getElementById(detailsId);
-        if (!details) return;
+// Expandable service details toggle (whole summary row is clickable)
+const serviceCards = document.querySelectorAll('.service-card');
+serviceCards.forEach(card => {
+    const summary = card.querySelector('.service-summary');
+    const trigger = card.querySelector('.service-trigger');
+    if (!summary || !trigger) return;
 
-        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!isExpanded));
-        details.hidden = isExpanded;
+    summary.addEventListener('click', () => {
+        const isOpen = card.classList.toggle('open');
+        trigger.setAttribute('aria-expanded', String(isOpen));
     });
 });
 

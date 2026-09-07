@@ -7,6 +7,9 @@
     <meta name="description" content="Персональный стилист. Онлайн — из любой точки мира. Лично — в GTA. Стиль как способ узнать себя и проявиться.">
     <meta property="og:title" content="Ольга Лазарева — Персональный стилист">
     <meta property="og:description" content="Персональный стилист. Онлайн — из любой точки мира. Лично — в GTA. Стиль как способ узнать себя и проявиться.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -58,102 +61,170 @@
     <section id="services" class="section services">
         <div class="container">
             <h2 class="section-title">Услуги и цены</h2>
-            <div class="services-grid">
+            <div class="services-list">
                 <div class="service-card">
-                    <h3 class="service-title">Карта стиля</h3>
-                    <p class="service-description">Если хочется понять, какой стиль действительно ваш и на что ориентироваться при выборе одежды.</p>
-                    <p class="service-price service-price--inline">CAD $350</p>
-                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="style-map-details">
-                        <span>Подробнее</span>
-                        <span class="service-toggle-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="service-details" id="style-map-details" hidden>
-                        <p class="service-details-meta">Подойдёт, если гардероб кажется случайным, нравится слишком много разного или прежний стиль перестал соответствовать вашей работе, образу жизни или внутреннему ощущению себя.</p>
-                        <p class="service-details-meta">Вместе мы определяем ваше визуальное направление: подходящие силуэты, цвета, фактуры, аксессуары и сочетания. В работе я также использую анализ внешности и архетипов — как инструменты, которые помогают собрать цельную картину, а не как набор правил.</p>
-                        <p class="service-details-meta">После работы вы получаете персональный PDF-альбом с визуальными ориентирами, примерами образов, цветовой палитрой и рекомендациями, к которому можно возвращаться перед покупками и при составлении комплектов.</p>
-                        <p class="service-details-meta"><strong>Формат:</strong> индивидуально, онлайн</p>
-                        <p class="service-details-meta"><strong>Стоимость:</strong> 350 CAD</p>
+                    <div class="service-summary">
+                        <h3 class="service-heading">
+                            <button class="service-trigger" type="button" aria-expanded="false" aria-controls="style-map-details">
+                                <span class="service-name">Карта стиля</span>
+                                <span class="service-leader" aria-hidden="true"></span>
+                                <span class="service-price">$350 <small>CAD</small></span>
+                                <span class="service-chevron-wrap" aria-hidden="true">
+                                    <svg class="service-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                                </span>
+                            </button>
+                        </h3>
+                        <p class="service-description">Если хочется понять, какой стиль действительно ваш и на что ориентироваться при выборе одежды.</p>
+                    </div>
+                    <div class="service-details" id="style-map-details">
+                        <div class="service-details-inner">
+                            <div class="service-details-body">
+                                <p>Подойдёт, если гардероб кажется случайным, нравится слишком много разного или прежний стиль перестал соответствовать вашей работе, образу жизни или внутреннему ощущению себя.</p>
+                                <p>Вместе мы определяем ваше визуальное направление: подходящие силуэты, цвета, фактуры, аксессуары и сочетания. В работе я также использую анализ внешности и архетипов — как инструменты, которые помогают собрать цельную картину, а не как набор правил.</p>
+                                <p>После работы вы получаете персональный PDF-альбом с визуальными ориентирами, примерами образов, цветовой палитрой и рекомендациями, к которому можно возвращаться перед покупками и при составлении комплектов.</p>
+                                <ul class="service-facts">
+                                    <li><span class="service-fact-label">Формат</span><span class="service-fact-value">Индивидуально, онлайн</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="service-card">
-                    <h3 class="service-title">Разбор гардероба дома</h3>
-                    <p class="service-description">Если вещей много, а носить по-прежнему нечего — или хочется понять, что из гардероба действительно работает.</p>
-                    <p class="service-price service-price--inline">CAD $160</p>
-                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="wardrobe-home-details">
-                        <span>Подробнее</span>
-                        <span class="service-toggle-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="service-details" id="wardrobe-home-details" hidden>
-                        <p class="service-details-meta">Я приезжаю к вам домой, и мы работаем непосредственно с вашим гардеробом. Вы примеряете вещи, мы смотрим посадку, сочетаем их между собой, собираем новые комплекты и определяем, что стоит оставить, убрать или заменить.</p>
-                        <p class="service-details-meta">По итогам формируем список вещей, которых не хватает для более цельного и функционального гардероба.</p>
-                        <p class="service-details-meta"><strong>Формат:</strong> у вас дома, 2–4 часа в зависимости от объёма гардероба</p>
-                        <p class="service-details-meta"><strong>Стоимость:</strong> 160 CAD</p>
-                        <p class="service-details-meta"><strong>Поддержка после разбора:</strong> 3 месяца</p>
+                    <div class="service-summary">
+                        <h3 class="service-heading">
+                            <button class="service-trigger" type="button" aria-expanded="false" aria-controls="wardrobe-home-details">
+                                <span class="service-name">Разбор гардероба дома</span>
+                                <span class="service-leader" aria-hidden="true"></span>
+                                <span class="service-price">$160 <small>CAD</small></span>
+                                <span class="service-chevron-wrap" aria-hidden="true">
+                                    <svg class="service-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                                </span>
+                            </button>
+                        </h3>
+                        <p class="service-description">Если вещей много, а носить по-прежнему нечего — или хочется понять, что из гардероба действительно работает.</p>
+                    </div>
+                    <div class="service-details" id="wardrobe-home-details">
+                        <div class="service-details-inner">
+                            <div class="service-details-body">
+                                <p>Я приезжаю к вам домой, и мы работаем непосредственно с вашим гардеробом. Вы примеряете вещи, мы смотрим посадку, сочетаем их между собой, собираем новые комплекты и определяем, что стоит оставить, убрать или заменить.</p>
+                                <p>По итогам формируем список вещей, которых не хватает для более цельного и функционального гардероба.</p>
+                                <ul class="service-facts">
+                                    <li><span class="service-fact-label">Формат</span><span class="service-fact-value">У вас дома</span></li>
+                                    <li><span class="service-fact-label">Длительность</span><span class="service-fact-value">2–4 часа, по объёму гардероба</span></li>
+                                    <li><span class="service-fact-label">Поддержка после</span><span class="service-fact-value">3 месяца</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="service-card">
-                    <h3 class="service-title">Онлайн-аудит гардероба</h3>
-                    <p class="service-description">Если нужен взгляд стилиста на гардероб, но удобнее работать дистанционно.</p>
-                    <p class="service-price service-price--inline">CAD $160</p>
-                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="wardrobe-online-details">
-                        <span>Подробнее</span>
-                        <span class="service-toggle-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="service-details" id="wardrobe-online-details" hidden>
-                        <p class="service-details-meta">Перед встречей вы фотографируете вещи или выбранную сезонную часть гардероба по моей инструкции. Я заранее изучаю материалы, после чего мы встречаемся онлайн и разбираем, что стоит оставить, как лучше сочетать вещи и чего не хватает.</p>
-                        <p class="service-details-meta">Если по фотографии сложно оценить конкретную вещь, её можно показать или примерить в кадре.</p>
-                        <p class="service-details-meta">После аудита у вас остаются рекомендации и список недостающих позиций для следующих покупок.</p>
-                        <p class="service-details-meta"><strong>Формат:</strong> онлайн</p>
-                        <p class="service-details-meta"><strong>Стоимость:</strong> 160 CAD</p>
-                        <p class="service-details-meta"><strong>Поддержка:</strong> 3 месяца</p>
+                    <div class="service-summary">
+                        <h3 class="service-heading">
+                            <button class="service-trigger" type="button" aria-expanded="false" aria-controls="wardrobe-online-details">
+                                <span class="service-name">Онлайн-аудит гардероба</span>
+                                <span class="service-leader" aria-hidden="true"></span>
+                                <span class="service-price">$160 <small>CAD</small></span>
+                                <span class="service-chevron-wrap" aria-hidden="true">
+                                    <svg class="service-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                                </span>
+                            </button>
+                        </h3>
+                        <p class="service-description">Если нужен взгляд стилиста на гардероб, но удобнее работать дистанционно.</p>
+                    </div>
+                    <div class="service-details" id="wardrobe-online-details">
+                        <div class="service-details-inner">
+                            <div class="service-details-body">
+                                <p>Перед встречей вы фотографируете вещи или выбранную сезонную часть гардероба по моей инструкции. Я заранее изучаю материалы, после чего мы встречаемся онлайн и разбираем, что стоит оставить, как лучше сочетать вещи и чего не хватает.</p>
+                                <p>Если по фотографии сложно оценить конкретную вещь, её можно показать или примерить в кадре.</p>
+                                <p>После аудита у вас остаются рекомендации и список недостающих позиций для следующих покупок.</p>
+                                <ul class="service-facts">
+                                    <li><span class="service-fact-label">Формат</span><span class="service-fact-value">Онлайн</span></li>
+                                    <li><span class="service-fact-label">Поддержка после</span><span class="service-fact-value">3 месяца</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="service-card">
-                    <h3 class="service-title">Шоппинг со стилистом</h3>
-                    <p class="service-description">Перед встречей мы отдельно обсуждаем задачу и цели.</p>
-                    <p class="service-price service-price--inline">CAD $70 / час</p>
-                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="shopping-details">
-                        <span>Подробнее</span>
-                        <span class="service-toggle-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="service-details" id="shopping-details" hidden>
-                        <p class="service-details-meta">В магазинах вы примеряете вещи, а я сразу показываю на практике, почему конкретная модель подходит или не подходит, как она сидит, с чем её можно носить и насколько она будет работать с вашим существующим гардеробом.</p>
-                        <p class="service-details-meta">Так в процессе шоппинга вы не только находите нужные вещи, но и постепенно начинаете лучше понимать собственный выбор.</p>
-                        <p class="service-details-meta"><strong>Формат:</strong> офлайн</p>
-                        <p class="service-details-meta"><strong>Стоимость:</strong> 70 CAD, минимум 2 часа</p>
-                        <p class="service-details-meta"><strong>Предварительная беседа:</strong> до 30 минут, бесплатно</p>
+                    <div class="service-summary">
+                        <h3 class="service-heading">
+                            <button class="service-trigger" type="button" aria-expanded="false" aria-controls="shopping-details">
+                                <span class="service-name">Шоппинг со стилистом</span>
+                                <span class="service-leader" aria-hidden="true"></span>
+                                <span class="service-price">$70 <small>CAD / час</small></span>
+                                <span class="service-chevron-wrap" aria-hidden="true">
+                                    <svg class="service-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                                </span>
+                            </button>
+                        </h3>
+                        <p class="service-description">Практика выбора в магазинах: находим нужные вещи и учимся понимать собственный выбор.</p>
+                    </div>
+                    <div class="service-details" id="shopping-details">
+                        <div class="service-details-inner">
+                            <div class="service-details-body">
+                                <p>Перед встречей мы отдельно обсуждаем задачу и цели.</p>
+                                <p>В магазинах вы примеряете вещи, а я сразу показываю на практике, почему конкретная модель подходит или не подходит, как она сидит, с чем её можно носить и насколько она будет работать с вашим существующим гардеробом.</p>
+                                <p>Так в процессе шоппинга вы не только находите нужные вещи, но и постепенно начинаете лучше понимать собственный выбор.</p>
+                                <ul class="service-facts">
+                                    <li><span class="service-fact-label">Формат</span><span class="service-fact-value">Офлайн, минимум 2 часа</span></li>
+                                    <li><span class="service-fact-label">Предварительная беседа</span><span class="service-fact-value">До 30 минут, бесплатно</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="service-card">
-                    <h3 class="service-title">Образ / капсула под задачу</h3>
-                    <p class="service-description">Когда одежда должна помочь решить конкретную жизненную задачу.</p>
-                    <p class="service-price service-price--inline">CAD $150</p>
-                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="capsule-details">
-                        <span>Подробнее</span>
-                        <span class="service-toggle-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="service-details" id="capsule-details" hidden>
-                        <p class="service-details-meta">Например: вас повысили, предстоит важное собеседование или выступление, вы возвращаетесь в офис после удалённой работы, едете в командировку или готовитесь к значимой встрече или мероприятию.</p>
-                        <p class="service-details-meta">Сначала мы обсуждаем ситуацию и впечатление, которое важно создать. После этого я определяю, что действительно нужно: один образ, несколько комплектов или небольшая капсула.</p>
-                        <p class="service-details-meta">Можно использовать уже имеющиеся вещи и при необходимости определить, что стоит докупить.</p>
-                        <p class="service-details-meta"><strong>Формат:</strong> онлайн или офлайн</p>
-                        <p class="service-details-meta"><strong>Стоимость:</strong> 150 CAD</p>
+                    <div class="service-summary">
+                        <h3 class="service-heading">
+                            <button class="service-trigger" type="button" aria-expanded="false" aria-controls="capsule-details">
+                                <span class="service-name">Образ / капсула под задачу</span>
+                                <span class="service-leader" aria-hidden="true"></span>
+                                <span class="service-price">$150 <small>CAD</small></span>
+                                <span class="service-chevron-wrap" aria-hidden="true">
+                                    <svg class="service-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                                </span>
+                            </button>
+                        </h3>
+                        <p class="service-description">Когда одежда должна помочь решить конкретную жизненную задачу.</p>
+                    </div>
+                    <div class="service-details" id="capsule-details">
+                        <div class="service-details-inner">
+                            <div class="service-details-body">
+                                <p>Например: вас повысили, предстоит важное собеседование или выступление, вы возвращаетесь в офис после удалённой работы, едете в командировку или готовитесь к значимой встрече или мероприятию.</p>
+                                <p>Сначала мы обсуждаем ситуацию и впечатление, которое важно создать. После этого я определяю, что действительно нужно: один образ, несколько комплектов или небольшая капсула.</p>
+                                <p>Можно использовать уже имеющиеся вещи и при необходимости определить, что стоит докупить.</p>
+                                <ul class="service-facts">
+                                    <li><span class="service-fact-label">Формат</span><span class="service-fact-value">Онлайн или офлайн</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="service-card">
-                    <h3 class="service-title">Мастер-класс о стиле / стилист на мероприятие</h3>
-                    <p class="service-description">Интерактивная встреча для дня рождения, девичника, камерного мероприятия или встречи с подругами.</p>
-                    <p class="service-price service-price--inline">По договорённости</p>
-                    <button class="service-toggle" type="button" aria-expanded="false" aria-controls="masterclass-details">
-                        <span>Подробнее</span>
-                        <span class="service-toggle-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="service-details" id="masterclass-details" hidden>
-                        <p class="service-details-meta">Это не лекция о моде, а живой разговор о стиле с участием всей группы. Мы разбираем разные стилевые направления, обсуждаем образы и детали, смотрим, как через одежду можно передавать характер и настроение.</p>
-                        <p class="service-details-meta">Участницы смогут определить близкие им направления, задать вопросы и получить небольшие персональные рекомендации.</p>
-                        <p class="service-details-meta">Содержание и формат встречи можно адаптировать под повод, количество гостей и интересы компании.</p>
-                        <p class="service-details-meta"><strong>Формат:</strong> групповой, офлайн</p>
-                        <p class="service-details-meta"><strong>Стоимость:</strong> по договорённости</p>
+                    <div class="service-summary">
+                        <h3 class="service-heading">
+                            <button class="service-trigger" type="button" aria-expanded="false" aria-controls="masterclass-details">
+                                <span class="service-name">Мастер-класс о стиле / стилист на мероприятие</span>
+                                <span class="service-leader" aria-hidden="true"></span>
+                                <span class="service-price service-price--text">по договорённости</span>
+                                <span class="service-chevron-wrap" aria-hidden="true">
+                                    <svg class="service-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                                </span>
+                            </button>
+                        </h3>
+                        <p class="service-description">Интерактивная встреча для дня рождения, девичника, камерного мероприятия или встречи с подругами.</p>
+                    </div>
+                    <div class="service-details" id="masterclass-details">
+                        <div class="service-details-inner">
+                            <div class="service-details-body">
+                                <p>Это не лекция о моде, а живой разговор о стиле с участием всей группы. Мы разбираем разные стилевые направления, обсуждаем образы и детали, смотрим, как через одежду можно передавать характер и настроение.</p>
+                                <p>Участницы смогут определить близкие им направления, задать вопросы и получить небольшие персональные рекомендации.</p>
+                                <p>Содержание и формат встречи можно адаптировать под повод, количество гостей и интересы компании.</p>
+                                <ul class="service-facts">
+                                    <li><span class="service-fact-label">Формат</span><span class="service-fact-value">Групповой, офлайн</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
