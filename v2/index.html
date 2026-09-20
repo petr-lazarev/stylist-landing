@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ольга Лазарева — Персональный стилист</title>
+    <meta name="description" content="Персональный стилист. Онлайн — из любой точки мира. Лично — в Торонто и Берлингтоне. Стиль как способ узнать себя и проявиться.">
+    <meta property="og:title" content="Ольга Лазарева — Персональный стилист">
+    <meta property="og:description" content="Персональный стилист. Онлайн — из любой точки мира. Лично — в Торонто и Берлингтоне.">
+    <meta name="theme-color" content="#f7f5f1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="brand">Ольга Лазарева</a>
+            <button class="hamburger" id="hamburger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="site-nav" id="siteNav">
+                <a href="#about" class="nav-link">Обо мне</a>
+                <a href="#services" class="nav-link">Услуги</a>
+                <a href="#works" class="nav-link">Работы</a>
+                <a href="#reviews" class="nav-link">Отзывы</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <p class="hero-kicker">Персональный стилист</p>
+                <h1 class="hero-title">Стиль, в котором есть <em>вы</em></h1>
+                <p class="hero-lead">Помогаю через одежду лучше почувствовать себя — свои формы, ритм жизни и то, как хочется проявляться в мире.</p>
+                <p class="hero-location">Онлайн — из любой точки мира. Лично — в Торонто и Берлингтоне.</p>
+                <a href="contacts.html" class="btn">Записаться</a>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="container">
+                <span class="label reveal">обо мне</span>
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <h2 class="section-title">Меня зовут Ольга. Я помогаю находить стиль, а не следовать чужому.</h2>
+                        <p>В работе мы не ищем «правильный» стиль и не подгоняем вас под типаж. Мы ищем ваш — тот, в котором есть естественность, опора и ощущение себя.</p>
+                        <p>Я использую анализ внешности и архетипов как инструменты, которые помогают собрать цельную картину, — а не как набор правил. Одежда для меня — это язык: через неё можно рассказать о себе то, что сложно выразить словами.</p>
+                        <p class="about-accent">Мы не меняем вас. Мы помогаем вам проявиться.</p>
+                        <div class="pillars">
+                            <div class="pillar reveal">
+                                <span class="label">образование</span>
+                                <strong>Дипломированный стилист</strong>
+                                <!-- TODO: указать учебное заведение и год, например: «Школа стилистики N, 2025» -->
+                                <p>Профессиональное образование в области персонального стайлинга и имиджа. Продолжаю учиться: слежу за современной теорией стиля и подходами, которые действительно работают.</p>
+                            </div>
+                            <div class="pillar reveal">
+                                <span class="label">подход</span>
+                                <strong>Бережно и без ярлыков</strong>
+                                <p>Никакого давления и навязанных решений. Работаем от вашей жизни, ощущений и вдохновения — деликатно, внимательно и в вашем темпе.</p>
+                            </div>
+                            <div class="pillar reveal">
+                                <span class="label">практика</span>
+                                <strong>Реальные клиенты</strong>
+                                <p>Консультации, разборы гардероба и шопинг-сопровождение. Каждая работа — с полной отдачей: пока клиентов немного, каждый получает максимум внимания.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="about-photo reveal">
+                        <img src="stylist-photo.jpg" alt="Ольга Лазарева — персональный стилист" width="900" height="1200" loading="lazy">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach -->
+        <section id="approach" class="section">
+            <div class="container">
+                <span class="label reveal">мой подход</span>
+                <h2 class="section-title reveal">Почему это работает</h2>
+                <div class="principles">
+                    <div class="principle reveal">
+                        <span class="principle-num">[01]</span>
+                        <p>Я не навешиваю ярлыки — стиль выстраивается вокруг вашей жизни, ощущений и вдохновения, а не вокруг модных формул.</p>
+                    </div>
+                    <div class="principle reveal">
+                        <span class="principle-num">[02]</span>
+                        <p>Вы не останетесь с красивыми идеями «в теории» — все рекомендации адаптированы под ваш ритм, роли и привычки.</p>
+                    </div>
+                    <div class="principle reveal">
+                        <span class="principle-num">[03]</span>
+                        <p>Работаем и с визуальной частью, и с самоощущением: если кажется, что «ничего не идёт», — это временное.</p>
+                    </div>
+                    <div class="principle reveal">
+                        <span class="principle-num">[04]</span>
+                        <p>Каждый формат даёт осязаемый результат: визуальные ориентиры, готовые комплекты, конкретные списки и шаги.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="section">
+            <div class="container">
+                <span class="label reveal">услуги</span>
+                <h2 class="section-title reveal">Выберите формат, который откликается</h2>
+                <div class="services-index">
+                    <a href="services/razbor-garderoba.html" class="service-row reveal">
+                        <div class="service-row-inner">
+                            <span class="service-num">[01]</span>
+                            <span class="service-name">Разбор гардероба</span>
+                            <span class="service-brief">Наводим порядок в вещах: что оставить, как сочетать и чего не хватает. Онлайн или у вас дома.</span>
+                            <span class="service-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </a>
+                    <a href="services/karta-stilya.html" class="service-row reveal">
+                        <div class="service-row-inner">
+                            <span class="service-num">[02]</span>
+                            <span class="service-name">Карта стиля</span>
+                            <span class="service-brief">Определяем ваше визуальное направление: силуэты, цвета, фактуры — и собираем всё в персональный PDF-альбом.</span>
+                            <span class="service-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </a>
+                    <a href="services/shopping.html" class="service-row reveal">
+                        <div class="service-row-inner">
+                            <span class="service-num">[03]</span>
+                            <span class="service-name">Шопинг со стилистом</span>
+                            <span class="service-brief">Практика выбора в магазинах: находим нужные вещи и учимся понимать собственный выбор.</span>
+                            <span class="service-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </a>
+                    <a href="services/obraz-pod-zadachu.html" class="service-row reveal">
+                        <div class="service-row-inner">
+                            <span class="service-num">[04]</span>
+                            <span class="service-name">Образ или капсула под задачу</span>
+                            <span class="service-brief">Когда одежда должна помочь решить конкретную жизненную задачу: собеседование, выступление, событие.</span>
+                            <span class="service-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </a>
+                    <a href="services/master-klass.html" class="service-row reveal">
+                        <div class="service-row-inner">
+                            <span class="service-num">[05]</span>
+                            <span class="service-name">Мастер-класс о стиле</span>
+                            <span class="service-brief">Живой разговор о стиле для дня рождения, девичника или камерного мероприятия.</span>
+                            <span class="service-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </a>
+                </div>
+                <p class="services-note reveal">Не знаете, с чего начать? Начните с бесплатной 30-минутной онлайн-встречи — расскажете о своей ситуации, и я помогу выбрать формат, который подойдёт именно сейчас.</p>
+            </div>
+        </section>
+
+        <!-- Works -->
+        <section id="works" class="section">
+            <div class="container">
+                <span class="label reveal">работы</span>
+                <h2 class="section-title reveal">Образы, собранные для клиентов</h2>
+                <div class="gallery-grid reveal" id="galleryGrid"></div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section id="reviews" class="section">
+            <div class="container">
+                <span class="label reveal">отзывы</span>
+                <h2 class="section-title reveal">Что говорят клиенты</h2>
+                <div class="reviews-grid">
+                    <div class="review-card reveal">
+                        <p class="review-text">После работы с тобой я стала гораздо увереннее думать про выбор вещей и покупки. Поизучала какие-то вещи, обувь — и поняла, что теперь мне легче купить что-то подороже, но именно «моё». Я даже готова мерить то, что раньше для себя совсем не рассматривала: жакет в стиле шанель, золотые детали у вещей и аксессуаров. В магазинах теперь гораздо проще — сразу по цвету и ткани понимаю, что возможно моё, а что совсем не надо. Спасибо тебе огромное, Оля! Ты мне очень помогла и добавила уверенности.</p>
+                        <p class="review-author">— Любовь</p>
+                    </div>
+                    <div class="review-card reveal">
+                        <p class="review-text">Мне всё очень нравится, продолжай в том же духе — у тебя получается глубоко, интересно и красиво. Больше всего цепляет твой подход: это ведь не просто подбор вещей, а работа через архетипы и психологию стиля. Чувствуется, что за этим стоит что-то настоящее, поэтому и попадаешь так точно.</p>
+                        <p class="review-author">— Анна</p>
+                    </div>
+                    <div class="review-card reveal">
+                        <p class="review-text">И вообще в магазинах легче в сто раз!!! Я зашла, взглядом окинула, и быстро по цветам, стилю, ткани выбираю на примерку по размеру и фигуре. А раньше всё шло через примерку, потому что вещь вроде нравится, но потом смотришь в зеркало, а что-то не то. Не сомневайся в своей полезности. И я знаю, как одеться, чтобы блеснуть, а как — чтобы слиться с окружающим миром.</p>
+                        <p class="review-author">— Любовь, через 3 месяца после консультации</p>
+                    </div>
+                    <div class="review-card reveal">
+                        <p class="review-text">Ещё раз большое спасибо за консультацию! Я нашла для себя полезное и интересное, отдельное спасибо за комплименты и подсвечивание лучшего.</p>
+                        <p class="review-author">— Шура</p>
+                    </div>
+                    <div class="review-card reveal">
+                        <p class="review-text">Мне очень понравилось с тобой работать. Для меня было важно, что рядом с тобой спокойно и комфортно. Ты очень деликатная, вежливая и внимательная — и для меня это как раз сильно показало твой профессионализм. Не было ощущения давления или что мне что-то навязывают — наоборот, всё было очень бережно, но при этом уверенно. Ещё мне понравилось, как ты смогла подстроиться под мой график: во время шопинга мы быстро уложились в нужное время, и при этом всё прошло спокойно и продуктивно. Было ощущение, что ты понимаешь, что мне нужно, и помогаешь не теряться среди вещей. Фотосессия тоже оставила очень приятное впечатление — я смогла прикоснуться к творческому процессу, посмотреть на себя немного по-другому, и в итоге у меня остались классные фотографии. И отдельно мне очень откликнулся твой подход через психологию стиля. Я раньше вообще не думала об одежде через архетипы и не смотрела на вещи с этой стороны. А сейчас понимаю, что одежда — это не просто вещи в шкафу, а способ показать свою индивидуальность и лучше почувствовать себя. Спасибо тебе за этот опыт. После работы с тобой у меня осталось ощущение, что я не просто подобрала одежду, а начала иначе смотреть на свой стиль и на себя.</p>
+                        <p class="review-author">— Тамилла</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-band">
+            <div class="container">
+                <h2>Не знаете, с чего начать?</h2>
+                <p>На бесплатной 30-минутной онлайн-встрече можно рассказать о своей ситуации, задать вопросы и понять, какой формат работы подойдёт именно сейчас.</p>
+                <a href="contacts.html" class="btn">Записаться на бесплатную встречу</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр изображения" hidden>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Закрыть">&times;</button>
+        <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Предыдущее">&#8249;</button>
+        <div class="lightbox-stage" id="lightboxStage">
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        </div>
+        <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Следующее">&#8250;</button>
+        <p class="lightbox-counter" id="lightboxCounter"></p>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-copy">© Ольга Лазарева, 2026</p>
+            <nav class="footer-nav">
+                <a href="#services">Услуги</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Вернуться наверх">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

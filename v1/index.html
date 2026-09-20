@@ -7,6 +7,7 @@
     <meta name="description" content="Персональный стилист. Онлайн — из любой точки мира. Лично — в GTA. Стиль как способ узнать себя и проявиться.">
     <meta property="og:title" content="Ольга Лазарева — Персональный стилист">
     <meta property="og:description" content="Персональный стилист. Онлайн — из любой точки мира. Лично — в GTA. Стиль как способ узнать себя и проявиться.">
+    <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -15,6 +16,7 @@
 <body>
     <!-- Navigation -->
     <nav class="nav">
+        <a href="#hero" class="nav-brand">Ольга Лазарева</a>
         <button class="hamburger" id="hamburger" aria-label="Меню">
             <span></span>
             <span></span>
@@ -35,8 +37,8 @@
         <div class="container">
             <h1 class="hero-name">Ольга Лазарева</h1>
             <p class="hero-subtitle">Персональный стилист</p>
-            <p class="hero-location">Онлайн — из любой точки мира. Лично — в Торонто, Берлингтон.</p>
             <p class="hero-tagline">Стиль как способ узнать себя и проявиться.</p>
+            <p class="hero-location">Онлайн — из любой точки мира. Лично — в Торонто, Берлингтон.</p>
             <button class="btn btn-primary cta-button">Записаться</button>
         </div>
     </section>
@@ -51,7 +53,7 @@
                     <p>В работе мы не ищем «правильный» стиль. Мы ищем ваш — тот, в котором есть естественность, опора и ощущение себя.</p>
                 </div>
                 <div class="about-image">
-                    <img src="stylist-photo.jpg" alt="Ольга Лазарева">
+                    <img src="stylist-photo.jpg" alt="Ольга Лазарева — персональный стилист" width="900" height="1200" loading="lazy">
                 </div>
             </div>
         </div>
@@ -241,46 +243,20 @@
     <section id="works" class="section works">
         <div class="container">
             <h2 class="section-title">Работы</h2>
-            <div class="works-grid">
-                <div class="work-card">
-                    <div class="work-image">
-                        <div class="image-placeholder"></div>
-                    </div>
-                    <p class="work-caption">Архетип</p>
-                </div>
-                <div class="work-card">
-                    <div class="work-image">
-                        <div class="image-placeholder"></div>
-                    </div>
-                    <p class="work-caption">Капсула</p>
-                </div>
-                <div class="work-card">
-                    <div class="work-image">
-                        <div class="image-placeholder"></div>
-                    </div>
-                    <p class="work-caption">Повседневность</p>
-                </div>
-                <div class="work-card">
-                    <div class="work-image">
-                        <div class="image-placeholder"></div>
-                    </div>
-                    <p class="work-caption">Съемка</p>
-                </div>
-                <div class="work-card">
-                    <div class="work-image">
-                        <div class="image-placeholder"></div>
-                    </div>
-                    <p class="work-caption">Минимализм</p>
-                </div>
-                <div class="work-card">
-                    <div class="work-image">
-                        <div class="image-placeholder"></div>
-                    </div>
-                    <p class="work-caption">Личный образ</p>
-                </div>
-            </div>
+            <div class="gallery-grid" id="galleryGrid"></div>
         </div>
     </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр изображения" hidden>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Закрыть">&times;</button>
+        <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Предыдущее">&#8249;</button>
+        <div class="lightbox-stage" id="lightboxStage">
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        </div>
+        <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Следующее">&#8250;</button>
+        <p class="lightbox-counter" id="lightboxCounter"></p>
+    </div>
 
     <!-- Reviews Section -->
     <section id="reviews" class="section reviews">
@@ -318,7 +294,7 @@
             <p class="contact-intro">Если вы хотите лучше почувствовать свой стиль и выразить себя через одежду, напишите мне.</p>
             <div class="contact-cards">
                 <a href="https://t.me/oly_laz" class="contact-card" target="_blank" rel="noopener noreferrer">
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.94 4.5c.25-1.07-.62-1.86-1.6-1.47L2.6 10.07c-1.1.43-1.08 1.05-.2 1.32l4.45 1.39 10.3-6.5c.49-.3.93-.13.57.2l-8.34 7.53-.32 4.59c.45 0 .65-.2.88-.43l2.12-2.05 4.4 3.25c.81.45 1.39.22 1.59-.75l2.88-13.6z"/></svg>
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
                     <span class="contact-card-name">Telegram</span>
                     <span class="contact-card-handle">@oly_laz</span>
                 </a>
@@ -335,6 +311,11 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© Ольга Лазарева, 2026</p>
+    </footer>
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Вернуться наверх">↑</button>
