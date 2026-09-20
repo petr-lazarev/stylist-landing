@@ -25,8 +25,8 @@
             <nav class="site-nav" id="siteNav">
                 <a href="#about" class="nav-link">Обо мне</a>
                 <a href="#services" class="nav-link">Услуги</a>
-                <a href="#works" class="nav-link">Работы</a>
                 <a href="#reviews" class="nav-link">Отзывы</a>
+                <a href="#works" class="nav-link">Работы</a>
                 <a href="contacts.html" class="nav-link">Контакты</a>
             </nav>
         </div>
@@ -36,16 +36,18 @@
         <!-- Hero (merged with intro, per mockup) -->
         <section id="hero" class="hero-split">
             <div class="hero-content">
-                <p class="hero-kicker">Персональный стилист</p>
+                <p class="hero-kicker">Персональный стилист-имиджмейкер</p>
                 <h1 class="hero-title">Быть разной, <em>оставаясь собой</em></h1>
                 <p class="hero-lead">Помогаю найти свой визуальный язык и собрать гардероб, созвучный вам и вашей жизни.</p>
                 <p class="hero-sub">Работаю и с глубокими стилевыми запросами, и с конкретными задачами — от разбора гардероба до образа для новой работы или важного события.</p>
-                <p class="hero-location">Онлайн — из любой точки мира.<br>Лично — Торонто / Берлингтон.</p>
+                <div class="hero-location">
+                    <p><span class="hero-location-mode">Онлайн</span>из любой точки мира</p>
+                    <p><span class="hero-location-mode">Лично</span>Торонто / Берлингтон</p>
+                </div>
                 <div class="hero-actions">
                     <a href="#services" class="btn">Услуги&nbsp;&nbsp;→</a>
                     <a href="contacts.html" class="btn btn-ghost">Записаться</a>
                 </div>
-                <p class="hero-tagline">Больше, чем гардероб — это вы</p>
             </div>
             <div class="hero-media">
                 <img src="images/hero.jpg" alt="Ольга Лазарева — персональный стилист" width="1500" height="2000" fetchpriority="high">
@@ -56,55 +58,26 @@
         <!-- About -->
         <section id="about" class="section">
             <div class="container">
-                <span class="label reveal">обо мне</span>
-                <div class="about-text reveal">
-                    <h2 class="section-title">Меня зовут Ольга. Я помогаю находить стиль, а не следовать чужому.</h2>
-                    <p>В работе мы не ищем «правильный» стиль и не подгоняем вас под типаж. Мы ищем ваш — тот, в котором есть естественность, опора и ощущение себя.</p>
-                    <p>Я использую анализ внешности и архетипов как инструменты, которые помогают собрать цельную картину, — а не как набор правил. Одежда для меня — это язык: через неё можно рассказать о себе то, что сложно выразить словами.</p>
-                    <p class="about-accent">Мы не меняем вас. Мы помогаем вам проявиться.</p>
-                </div>
-                <div class="pillars">
-                    <div class="pillar reveal">
-                        <span class="label">образование</span>
-                        <strong>Дипломированный стилист</strong>
-                        <!-- TODO: указать учебное заведение и год, например: «Школа стилистики N, 2025» -->
-                        <p>Профессиональное образование в области персонального стайлинга и имиджа. Продолжаю учиться: слежу за современной теорией стиля и подходами, которые действительно работают.</p>
-                    </div>
-                    <div class="pillar reveal">
-                        <span class="label">подход</span>
-                        <strong>Бережно и без ярлыков</strong>
-                        <p>Никакого давления и навязанных решений. Работаем от вашей жизни, ощущений и вдохновения — деликатно, внимательно и в вашем темпе.</p>
-                    </div>
-                    <div class="pillar reveal">
-                        <span class="label">практика</span>
-                        <strong>Реальные клиенты</strong>
-                        <p>Консультации, разборы гардероба и шопинг-сопровождение. Каждая работа — с полной отдачей: пока клиентов немного, каждый получает максимум внимания.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Approach -->
-        <section id="approach" class="section">
-            <div class="container">
                 <span class="label reveal">мой подход</span>
-                <h2 class="section-title reveal">Почему это работает</h2>
-                <div class="principles">
-                    <div class="principle reveal">
-                        <span class="principle-num">[01]</span>
-                        <p>Я не навешиваю ярлыки — стиль выстраивается вокруг вашей жизни, ощущений и вдохновения, а не вокруг модных формул.</p>
-                    </div>
-                    <div class="principle reveal">
-                        <span class="principle-num">[02]</span>
-                        <p>Вы не останетесь с красивыми идеями «в теории» — все рекомендации адаптированы под ваш ритм, роли и привычки.</p>
-                    </div>
-                    <div class="principle reveal">
-                        <span class="principle-num">[03]</span>
-                        <p>Работаем и с визуальной частью, и с самоощущением: если кажется, что «ничего не идёт», — это временное.</p>
-                    </div>
-                    <div class="principle reveal">
-                        <span class="principle-num">[04]</span>
-                        <p>Каждый формат даёт осязаемый результат: визуальные ориентиры, готовые комплекты, конкретные списки и шаги.</p>
+                <div class="about-text reveal">
+                    <h2 class="section-title">Я не подгоняю вас под стиль, а выстраиваю стиль вокруг вас</h2>
+                    <p><strong>Я не работаю по одному универсальному шаблону.</strong></p>
+                    <p>В зависимости от вашего запроса я соединяю разные инструменты: анализ внешности, цветотип, линии лица, архетипический подход, ваш образ жизни и структуру гардероба.</p>
+                    <p>В работе мне важно понять:</p>
+                    <ul class="about-list">
+                        <li>что именно вы хотите выразить сейчас;</li>
+                        <li>какие линии, цвета и фактуры естественно продолжают вашу внешность;</li>
+                        <li>какие эстетики и визуальные мотивы действительно вам близки;</li>
+                        <li>как перевести всё это в одежду, которая работает в вашей реальной жизни.</li>
+                    </ul>
+                    <p class="about-accent">Не искать себя в готовых образах — собрать образ вокруг себя.</p>
+                </div>
+                <div class="about-credential reveal">
+                    <span class="label">профессиональная база</span>
+                    <div class="about-credential-body">
+                        <strong>Стилистика и имиджмейкинг</strong>
+                        <p>Профессиональная переподготовка в сфере стилистики и имиджмейкинга — Art&nbsp;&amp;&nbsp;Image, 2026.</p>
+                        <p>Дополнительная подготовка в направлениях архетипического анализа личности и работы с линиями внешности, 2024.</p>
                     </div>
                 </div>
             </div>
@@ -124,17 +97,9 @@
                             <span class="service-arrow" aria-hidden="true">→</span>
                         </div>
                     </a>
-                    <a href="services/karta-stilya.html" class="service-row reveal">
-                        <div class="service-row-inner">
-                            <span class="service-num">[02]</span>
-                            <span class="service-name">Карта стиля</span>
-                            <span class="service-brief">Определяем ваше визуальное направление: силуэты, цвета, фактуры — и собираем всё в персональный PDF-альбом.</span>
-                            <span class="service-arrow" aria-hidden="true">→</span>
-                        </div>
-                    </a>
                     <a href="services/shopping.html" class="service-row reveal">
                         <div class="service-row-inner">
-                            <span class="service-num">[03]</span>
+                            <span class="service-num">[02]</span>
                             <span class="service-name">Шопинг со стилистом</span>
                             <span class="service-brief">Практика выбора в магазинах: находим нужные вещи и учимся понимать собственный выбор.</span>
                             <span class="service-arrow" aria-hidden="true">→</span>
@@ -142,31 +107,22 @@
                     </a>
                     <a href="services/obraz-pod-zadachu.html" class="service-row reveal">
                         <div class="service-row-inner">
-                            <span class="service-num">[04]</span>
+                            <span class="service-num">[03]</span>
                             <span class="service-name">Образ или капсула под задачу</span>
                             <span class="service-brief">Когда одежда должна помочь решить конкретную жизненную задачу: собеседование, выступление, событие.</span>
                             <span class="service-arrow" aria-hidden="true">→</span>
                         </div>
                     </a>
-                    <a href="services/master-klass.html" class="service-row reveal">
+                    <a href="services/karta-stilya.html" class="service-row reveal">
                         <div class="service-row-inner">
-                            <span class="service-num">[05]</span>
-                            <span class="service-name">Мастер-класс о стиле</span>
-                            <span class="service-brief">Живой разговор о стиле для дня рождения, девичника или камерного мероприятия.</span>
+                            <span class="service-num">[04]</span>
+                            <span class="service-name">Карта стиля</span>
+                            <span class="service-brief">Определяем ваше визуальное направление: силуэты, цвета, фактуры — и собираем всё в персональный PDF-альбом.</span>
                             <span class="service-arrow" aria-hidden="true">→</span>
                         </div>
                     </a>
                 </div>
                 <p class="services-note reveal">Не знаете, с чего начать? Начните с бесплатной 30-минутной онлайн-встречи — расскажете о своей ситуации, и я помогу выбрать формат, который подойдёт именно сейчас.</p>
-            </div>
-        </section>
-
-        <!-- Works -->
-        <section id="works" class="section">
-            <div class="container">
-                <span class="label reveal">работы</span>
-                <h2 class="section-title reveal">Образы, собранные для клиентов</h2>
-                <div class="gallery-grid reveal" id="galleryGrid"></div>
             </div>
         </section>
 
@@ -197,6 +153,14 @@
                         <p class="review-author">— Тамилла</p>
                     </div>
                 </div>
+            </div>
+        </section>
+        <!-- Works -->
+        <section id="works" class="section">
+            <div class="container">
+                <span class="label reveal">работы</span>
+                <h2 class="section-title reveal">Образы, собранные для клиентов</h2>
+                <div class="gallery-grid reveal" id="galleryGrid"></div>
             </div>
         </section>
 

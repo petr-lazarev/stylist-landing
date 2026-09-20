@@ -105,7 +105,7 @@ img {
 
 .brand {
     font-family: var(--font-serif);
-    font-size: 1.35rem;
+    font-size: clamp(1.6rem, 2.5vw, 1.9rem);
     font-weight: 500;
     letter-spacing: 0.02em;
     text-decoration: none;
@@ -274,21 +274,29 @@ img {
 }
 
 .hero-location {
-    position: relative;
-    font-size: 0.9rem;
-    color: var(--muted);
-    padding-left: 3.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    border-left: 1px solid var(--ink);
+    padding-left: 1.25rem;
     margin-bottom: 2.5rem;
 }
 
-.hero-location::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.7em;
-    width: 2.25rem;
-    height: 1px;
-    background-color: var(--ink);
+.hero-location p {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+}
+
+.hero-location-mode {
+    flex-shrink: 0;
+    min-width: 4.75rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink);
 }
 
 .hero-actions {
@@ -345,8 +353,7 @@ img {
     .hero-tagline { margin-top: 2.5rem; }
 
     .hero-media {
-        max-height: 72vh;
-        aspect-ratio: 4 / 5;
+        display: none;
     }
 }
 
@@ -371,6 +378,24 @@ img {
     max-width: 38rem;
 }
 
+.about-text ul.about-list {
+    list-style: none;
+    max-width: 38rem;
+    margin-bottom: 1.25rem;
+}
+
+.about-text ul.about-list li {
+    position: relative;
+    padding: 0.55rem 0 0.55rem 1.6rem;
+}
+
+.about-text ul.about-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--muted);
+}
+
 .about-text p.about-accent {
     font-family: var(--font-serif);
     font-size: 1.5rem;
@@ -379,24 +404,18 @@ img {
     margin: 2rem 0 0;
 }
 
-/* ---------- Pillars (education / approach / practice) ---------- */
-.pillars {
+/* ---------- About: credential row ---------- */
+.about-credential {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: minmax(12rem, 1fr) 2fr;
     gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: start;
     margin-top: clamp(2.5rem, 6vh, 4rem);
     padding-top: clamp(2rem, 5vh, 3rem);
     border-top: 1px solid var(--line);
 }
 
-.pillar .label { margin-bottom: 0.9rem; }
-
-.pillar p {
-    font-size: 0.95rem;
-    color: var(--muted);
-}
-
-.pillar strong {
+.about-credential-body strong {
     display: block;
     font-family: var(--font-serif);
     font-size: 1.35rem;
@@ -405,35 +424,19 @@ img {
     margin-bottom: 0.5rem;
 }
 
-@media (max-width: 820px) {
-    .pillars { grid-template-columns: 1fr; }
-}
-
-/* ---------- Principles ([01]–[04]) ---------- */
-.principles {
-    display: grid;
-    gap: 0;
-    max-width: 46rem;
-}
-
-.principle {
-    display: grid;
-    grid-template-columns: 4.5rem 1fr;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--line);
-}
-
-.principle:last-child { border-bottom: none; }
-
-.principle-num {
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
+.about-credential-body p {
+    font-size: 0.95rem;
     color: var(--muted);
-    padding-top: 0.3rem;
+    max-width: 34rem;
 }
 
-.principle p { color: var(--ink); }
+.about-credential-body p + p {
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 820px) {
+    .about-credential { grid-template-columns: 1fr; gap: 0.9rem; }
+}
 
 /* ---------- Services index (home) ---------- */
 .service-row {
