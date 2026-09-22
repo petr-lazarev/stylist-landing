@@ -95,7 +95,21 @@ if (revealElements.length && 'IntersectionObserver' in window && !prefersReduced
 }
 
 // --- Works gallery with lightbox (home only) ---
-const GALLERY_IMAGE_COUNT = 45;
+const GALLERY_IMAGES = Array.from({ length: 12 }, (_, i) => `assets/${i + 1}.png`);
+const GALLERY_CAPTIONS = [
+    'Капсула для работы для клиентки',
+    'Рекомендации по подбору бижутерии для клиентки',
+    'Карта стиля для клиентки. Рекомендации по выбору пальто',
+    'Карта стиля для клиентки. Рекомендации по выбору сумок',
+    'Карта стиля для клиентки. Рекомендации по выбору жакета',
+    'Карта стиля для клиентки и рекомендации по подбору бижутерии',
+    'Преображение клиентки. Шоппинг',
+    'Глубокий анализ стиля клиентки через визуальные ассоциации',
+    'Глубокий анализ стиля клиентки через визуальные ассоциации',
+    'Глубокий анализ стиля клиентки через визуальные ассоциации',
+    'Карта стиля. Рекомендации по выбору бомбера',
+    'Глубокий анализ стиля клиентки через визуальные ассоциации'
+];
 const galleryGrid = document.getElementById('galleryGrid');
 const lightbox = document.getElementById('lightbox');
 
@@ -103,33 +117,71 @@ if (galleryGrid && lightbox) {
     const lightboxStage = document.getElementById('lightboxStage');
     const lightboxImage = document.getElementById('lightboxImage');
     const lightboxCounter = document.getElementById('lightboxCounter');
+    const lightboxCaption = document.getElementById('lightboxCaption');
     let currentImageIndex = 0;
 
     const button = document.createElement('button');
     button.className = 'gallery-item';
-    button.setAttribute('aria-label', `Открыть галерею работ (${GALLERY_IMAGE_COUNT} фото)`);
+    button.setAttribute('aria-label', 'Открыть фото во весь экран');
 
     const img = document.createElement('img');
-    img.src = 'assets/1.png';
     img.alt = 'Работы';
     img.decoding = 'async';
 
     const hint = document.createElement('span');
     hint.className = 'gallery-item-hint';
-    hint.textContent = `Смотреть все работы — ${GALLERY_IMAGE_COUNT} фото`;
+    hint.textContent = 'Открыть во весь экран';
 
     button.appendChild(img);
     button.appendChild(hint);
-    button.addEventListener('click', () => openLightbox(0));
+    button.addEventListener('click', () => openLightbox(currentImageIndex));
     galleryGrid.appendChild(button);
 
+    const caption = document.createElement('p');
+    caption.className = 'gallery-caption';
+    galleryGrid.appendChild(caption);
+
+    // Inline navigation under the image
+    const nav = document.createElement('div');
+    nav.className = 'gallery-nav';
+
+    const prevBtn = document.createElement('button');
+    prevBtn.className = 'gallery-nav-arrow';
+    prevBtn.setAttribute('aria-label', 'Предыдущее фото');
+    prevBtn.innerHTML = '&#8249;';
+    prevBtn.addEventListener('click', () => showImage(currentImageIndex - 1));
+
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'gallery-nav-arrow';
+    nextBtn.setAttribute('aria-label', 'Следующее фото');
+    nextBtn.innerHTML = '&#8250;';
+    nextBtn.addEventListener('click', () => showImage(currentImageIndex + 1));
+
+    const navCounter = document.createElement('span');
+    navCounter.className = 'gallery-nav-counter';
+
+    nav.appendChild(prevBtn);
+    nav.appendChild(nextBtn);
+    nav.appendChild(navCounter);
+    galleryGrid.appendChild(nav);
+
     function showImage(index) {
-        currentImageIndex = (index + GALLERY_IMAGE_COUNT) % GALLERY_IMAGE_COUNT;
+        currentImageIndex = (index + GALLERY_IMAGES.length) % GALLERY_IMAGES.length;
         lightbox.classList.remove('zoomed');
-        lightboxImage.src = `assets/${currentImageIndex + 1}.png`;
-        lightboxImage.alt = `Работа ${currentImageIndex + 1}`;
-        lightboxCounter.textContent = `${currentImageIndex + 1} / ${GALLERY_IMAGE_COUNT}`;
+        const captionText = GALLERY_CAPTIONS[currentImageIndex] || '';
+        img.src = GALLERY_IMAGES[currentImageIndex];
+        img.alt = captionText || `Работа ${currentImageIndex + 1}`;
+        caption.textContent = captionText;
+        caption.hidden = !captionText;
+        navCounter.textContent = `${currentImageIndex + 1} / ${GALLERY_IMAGES.length}`;
+        lightboxImage.src = GALLERY_IMAGES[currentImageIndex];
+        lightboxImage.alt = img.alt;
+        lightboxCaption.textContent = captionText;
+        lightboxCaption.hidden = !captionText;
+        lightboxCounter.textContent = navCounter.textContent;
     }
+
+    showImage(0);
 
     function openLightbox(index) {
         showImage(index);

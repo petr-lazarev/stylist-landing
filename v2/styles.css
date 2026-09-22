@@ -467,10 +467,10 @@ img {
     font-size: clamp(1.5rem, 3vw, 2.1rem);
     font-weight: 500;
     line-height: 1.2;
-    transition: font-style 0.15s ease;
+    transition: color 0.2s ease;
 }
 
-.service-row:hover .service-name { font-style: italic; }
+.service-row:hover .service-name { color: var(--muted); }
 
 .service-brief {
     font-size: 0.95rem;
@@ -535,7 +535,7 @@ img {
 /* ---------- Works ---------- */
 .gallery-grid {
     display: grid;
-    max-width: 30rem;
+    max-width: 56rem;
 }
 
 .gallery-item {
@@ -568,6 +568,46 @@ img {
     text-align: left;
 }
 
+.gallery-caption {
+    margin-top: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
+.gallery-caption[hidden] { display: none; }
+
+.gallery-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.gallery-nav-arrow {
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid var(--line);
+    background: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--muted);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.gallery-nav-arrow:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+}
+
+.gallery-nav-counter {
+    margin-left: auto;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+}
+
 /* ---------- Lightbox ---------- */
 .lightbox {
     position: fixed;
@@ -577,22 +617,25 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem 0 7rem;
 }
 
 .lightbox[hidden] { display: none; }
 
 .lightbox-stage {
     max-width: 90vw;
-    max-height: 88vh;
+    max-height: calc(100vh - 8.5rem);
     overflow: hidden;
 }
 
 .lightbox-image {
     max-width: 90vw;
-    max-height: 88vh;
+    max-height: calc(100vh - 8.5rem);
     object-fit: contain;
     cursor: zoom-in;
 }
+
+.lightbox.zoomed { padding: 0; }
 
 .lightbox.zoomed .lightbox-stage {
     overflow: auto;
@@ -636,6 +679,22 @@ img {
 
 .lightbox-prev { left: 0.5rem; }
 .lightbox-next { right: 0.5rem; }
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 2.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: min(90vw, 42rem);
+    padding: 0 1rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    z-index: 210;
+}
+
+.lightbox-caption[hidden] { display: none; }
 
 .lightbox-counter {
     position: absolute;
@@ -721,7 +780,7 @@ img {
 /* ---------- Service page: fit list ---------- */
 .fit-list {
     list-style: none;
-    max-width: 44rem;
+    max-width: 56rem;
 }
 
 .fit-list li {
@@ -822,7 +881,7 @@ img {
 
 /* ---------- Service page: Q&A ---------- */
 .qa-list {
-    max-width: 44rem;
+    max-width: 56rem;
 }
 
 .qa-list details {
